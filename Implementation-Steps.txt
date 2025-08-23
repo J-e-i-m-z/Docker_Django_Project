@@ -1,0 +1,53 @@
+PROJECT - DOCKERIZING A PYTHON DJANGO PROJECT ( Proof of Concept - POC )
+
+Implementation steps
+
+1. Created a Dockerfile
+2. Created a docker-compose file
+3. Organized git repo
+
+4. Building 
+-  docker compose -f docker-compose.yaml build ( Tells Docker Please look at the docker-compose.yaml file, and for every service defined in it that has a build: instruction, go ahead and build its Docker image.)
+
+5. Start the services
+- docker compose -f docker-compose.yaml up -d
+ 
+6. Check if it's running
+- docker compose -f docker-compose.yaml ps
+
+7. View logs
+- docker compose -f docker-compose.yaml logs -f web
+
+INCASE OF CHANGES TO COMPOSE FILE: Restart containers
+docker compose -f docker-compose.yaml down
+docker compose -f docker-compose.yaml up --build -d
+
+8. Testing inside the VM
+- curl http://localhost:8080
+
+PUSHING TO DOCKER HUB - Steps
+
+1. docker login
+2. docker tag docker_django_project-web jamesnyamburi/django-hospital-app:latest
+3. docker push jamesnyamburi/django-hospital-app:latest
+4. Verify on dockerhub
+
+TESTING 1 ( on a separate machine )
+docker pull jamesnyamburi/django-hospital-app:latest
+docker run -p 8080:8000 jamesnyamburi/django-hospital-app:latest
+
+TESTING 2
+- Currently, the docker-compose.yaml is set to build the web image locally (build: .)
+
+Allowing others to just pull prebuilt image from Docker Hub, do: 
+- change build: section to image: in compose file
+
+Others who want to run this  project do:
+- git clone https://github.com/J-e-i-m-z/Docker_Django_Project.git
+- docker compose up -d 
+- Access at http://localhost:8080
+
+
+
+
+

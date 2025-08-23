@@ -10,7 +10,7 @@
 - Can view/book/approve Appointment (approve those appointments which is requested by patient).
 ---
 
-## HOW TO RUN THIS PROJECT
+## HOW TO RUN THIS PROJECT ( BEFORE CONTAINERIZING )
 - Install Python(3.7.6) (Dont Forget to Tick Add to Path while installing Python)
 - Open Terminal and Execute Following Commands :
 ```
@@ -28,4 +28,20 @@ py manage.py runserver
 - Now enter following URL in Your Browser Installed On Your Pc
 ```
 http://127.0.0.1:8000/
+```
+
+## HOW TO RUN THIS PROJECT ( AFTER CONTAINERIZING - WITH DOCKER )
+- Ensure you have docker and docker compose installed on your machine
+- Clone the repo:
+```
+git clone https://github.com/J-e-i-m-z/Docker_Django_Project.git
+cd Docker_Django_Project
+```
+- RUN:
+```
+docker compose up -d
+``` 
+- Access at:
+```
+http://localhost:8080
 ```
