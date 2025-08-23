@@ -1,0 +1,4 @@
+
+# Django runtime files
+/db.sqlite3
+/staticfiles/

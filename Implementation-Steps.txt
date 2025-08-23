@@ -47,6 +47,15 @@ Others who want to run this  project do:
 - docker compose up -d 
 - Access at http://localhost:8080
 
+STOPPING THE PROJECT: 
+- docker compose down
+or
+- docker compose down -v
+
+WHY STOP PROJECT:
+- Free up ports
+- Reset the environment
+- Testing fresh builds
 
 
 

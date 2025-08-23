@@ -45,3 +45,11 @@ docker compose up -d
 ```
 http://localhost:8080
 ```
+- To stop the project RUN:
+```
+docker compose down
+```
+- or
+```
+docker compose down -v
+```
