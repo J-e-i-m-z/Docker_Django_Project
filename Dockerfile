@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 
 # Install Python dependencies without caching to keep the image small
-RUN pip install --no-cache-dir -r requirement.txt gunicorn
+RUN pip install --no-cache-dir -r requirements.txt gunicorn
 
 # Copy Project code from host to container
 COPY . .
