@@ -2,7 +2,8 @@ version: '3.8'
 
 services:
   web:
-    build: . 
+    # build: . 
+    image: jamesnyamburi/django-hospital-app:latest
     ports:
       - "8080:8000"
     # environment:
