@@ -1,4 +1,4 @@
-version: '3.8'
+#version: '3.8'
 
 services:
   web:
@@ -17,9 +17,9 @@ services:
              gunicorn --bind 0.0.0.0:8000 hospitalmanagement.wsgi:application"
 
   # Redis Image for caching
-  redis:
-    image: redis:alpine
-    ports: 
-      - "6379:6379"
+  #redis:
+  #image: redis:alpine
+  #ports: 
+  #- "6379:6379"
 
 
